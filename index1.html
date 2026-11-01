@@ -158,7 +158,6 @@
                         <h3 class="text-3xl sm:text-4xl font-extrabold mt-3" id="res-principal">0 cajas + 0 piezas</h3>
                     </div>
                     <div class="mt-8 pt-4 border-t border-indigo-500/40 flex justify-between items-center text-xs text-indigo-200">
-                        <span id="res-sublabel">Precisión exacta sin desperdicio</span>
                         <button onclick="copiarResumen()" class="bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition text-white font-medium flex items-center space-x-1.5">
                             <i class="fa-solid fa-copy"></i>
                             <span>Copiar</span>
@@ -280,7 +279,6 @@
 
                 document.getElementById('res-badge').innerText = 'Resultado Exacto';
                 document.getElementById('res-principal').innerText = `${cajasCompletas} cajas + ${piezasSueltas} piezas`;
-                document.getElementById('res-sublabel').innerText = 'Precisión exacta sin desperdicio';
                 
                 document.getElementById('label-stat-1').innerText = 'Total de Piezas';
                 document.getElementById('res-total-piezas').innerText = totalPiezasNecesarias;
@@ -300,7 +298,6 @@
                 if (cajasInput === 0 && piezasInput === 0) {
                     document.getElementById('res-badge').innerText = 'Metros Totales Calculados';
                     document.getElementById('res-principal').innerText = `0.00 m²`;
-                    document.getElementById('res-sublabel').innerText = `Equivalente a 0 cajas + 0 piezas`;
                     document.getElementById('res-total-piezas').innerText = '0';
                     document.getElementById('res-metros-reales').innerText = '0.00';
                     document.getElementById('res-explicacion').innerText = 'Ingrese cajas y piezas sueltas para calcular los metros totales.';
@@ -314,7 +311,6 @@
 
                 document.getElementById('res-badge').innerText = 'Metros Totales Calculados';
                 document.getElementById('res-principal').innerText = `${metrosCalculados.toFixed(2)} m²`;
-                document.getElementById('res-sublabel').innerText = `Equivalente a ${cajasCompletasCalc} cajas + ${piezasSueltasCalc} piezas`;
 
                 document.getElementById('label-stat-1').innerText = 'Total de Piezas';
                 document.getElementById('res-total-piezas').innerText = totalPiezas;
@@ -333,11 +329,9 @@
             if (modoActual === 'm2') {
                 document.getElementById('res-badge').innerText = 'Resultado Exacto';
                 document.getElementById('res-principal').innerText = '0 cajas + 0 piezas';
-                document.getElementById('res-sublabel').innerText = 'Precisión exacta sin desperdicio';
             } else {
                 document.getElementById('res-badge').innerText = 'Metros Totales Calculados';
                 document.getElementById('res-principal').innerText = '0.00 m²';
-                document.getElementById('res-sublabel').innerText = 'Equivalente a 0 cajas + 0 piezas';
             }
             document.getElementById('res-total-piezas').innerText = '0';
             document.getElementById('res-metros-reales').innerText = '0.00';
